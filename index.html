@@ -16,49 +16,69 @@
     <meta name="keywords" content="ga, IT관련블로그, 경영정보">
     <meta name="author" content="choi hyoungbin">
     <title>Welcome to hyoungbin's site</title>
+    <script src="https://kit.fontawesome.com/b5f9029813.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        section{
+            display: flex;
+        }
+        .content{
+            flex:4;
+        }
+        aside{
+            flex:1;
+        }
+        body{
+            margin-top: 20px;
+            margin: 0 auto;
+            max-width: 980px;
+        }
+    </style>
 </head>
 <body>
 <!---- header+nav+section>article*3+aside^footer -->
-<header>
-    <img src="./images/logo.jpg" alt="CI">
+<header id="home">
+    <i class="fa-sharp fa-solid fa-bars"></i>
     <h1>hello, my name is hyoungbin choi.</h1>
 </header>
 <nav>
-    <!--ul>li*4{메인메뉴$$}-->
+    <!--ul>li*4>a{메인메뉴$$}-->
 <ul>
-    <li>소개</li>
-    <li>쇼핑</li>
-    <li>패키지</li>
-    <li>커뮤니티</li>
+    <li><a href="#">소개</a></li>
+    <li><a href="#">쇼핑</a></li>
+    <li><a href="#">패키지</a></li>
+    <li><a href="#">커뮤니티</a></li>
 </ul>
 </nav>
  <section>
+    <div class="content">
     <article>
         <div class="bigdata">
-        <img src="./images/bigdata.jpg" alt="메인이미지"width=50%>
+        <img src="./images/bigdata.jpg" class="w3-circle" alt="메인이미지"width=50%>
         </div>
         <div class="action">
           <h2>나의 대외활동 이력</h2>
-          <table border="1">
+          <table class="w3-table-all w3-hoverable">
             <tr>
                 <th>기간</th>
-                <th>대외활동내용</th>
-                <th>주최</th>
+                <th>기업</th>
+                <th>사장</th>
             </tr>
             <tr>
                 <td>2021.3</td>
-                <td>마케팅경진대회</td>
-                <td>정보학회</td>
+                <td>삼성전자</td>
+                <td>이재용</td>           
             </tr>
             <tr>
                 <td>2022.5</td>
-                <td>GA마케팅경진대회</td>
-                <td>정보학회</td>
+                <td>카카오</td>
+                <td>김범수</td>
             </tr>
             <tr>
                 <td>2022.6</td>
-                <td>GA교육프로그램</td>
-                <td>동의대학교</td>
+                <td>테슬라</td>
+                <td>일론 머스크</td>
             </tr>
           </table>
         </div>
@@ -68,9 +88,9 @@
         <h2>좋아하는 음악</h2>
         <audio src="./media/music01.mp3" controls></audio>
         <h2>흑곰과 갈매기 그들의 이야기</h2>
-        <video src="./media/movie.mp4" controls width="50%"></video>
-        <h2>손흥민 활약상</h2>
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/UpkEyf9B57I" title="[22/23 PL 8R] 토트넘 vs 레스터 손흥민 활약상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video src="./media/movie.mp4" controls width="30%"></video>
+        <h2>4만전자 가나요???</h2>
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/IXLhWKC1qm8" title="이재용 "600만 개미 고통에 책임감"... '5만 전자', 지금이 바닥이다?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 <article>동영상</article>
@@ -79,14 +99,32 @@
         <iframe width="70%" height="400" src="./gallery.html" frameborder="0"></iframe>
     </div>
 </article>
+</div>
 <aside> 
  <div class="link">
-<a href="http://mis.deu.ac.kr">경영정보학과 사이트</a> <br>
+<a href="http://mis.deu.ac.kr" target="blank" visited="puple" active link="red">경영정보학과 사이트</a> <br>
 <a href="./gallery.html">갤러리</a> <br>
-<a href=""></a>
+<a href="#home">시작이동</a>
  </div>   
+ <div class="login">
+<h2> 로그인</h2>
+    <form action="#" method="get">
+       회원ID <input type="text" class="w3-input" name="id"> <br>
+       비밀번호 <input type="password" class="w3-input" name="pw" id="">  <br>
+       남자 <input type="radio" name="gender" value="1" id="">
+       여자 <input type="radio" name="gender" value="2" id=""> <br>
+        <input type="submit" class="w3-button w3-purple" value="로그인">
+        <input type="reset" class="w3-button w3-purple" value="재설정">
+    </form>
+ </div>
 </aside>
 </section>
-   <footer> 저작권과 주소</footer>
+   <footer> 저작권과 주소
+    <div class="sns">
+        <a href="https://www.youtube.com/">
+        <i class="fa-brands fa-youtube"></i></a>        
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+   </footer>
 </body>
 </html> 
